@@ -776,8 +776,8 @@ tuple(${VISUAL})
 endsnippet
 
 # # <template name="up" value="print(*$SELECTION$)" description="print(*selection)" toReformat="false" toShortenFQNames="true">
-snippet pu "print(*unpacked)" b
-print(*${VISUAL})
+snippet pu "print(*unpacked, sep='\n')" b
+print(*${VISUAL}, sep='\n')
 endsnippet
 
 # # <template name="re" value="return " description="return" toReformat="false" toShortenFQNames="true">
