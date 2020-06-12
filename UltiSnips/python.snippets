@@ -699,7 +699,7 @@ def __repr__(self):
 endsnippet
 
 snippet plu "ds print w * and \n" b
-print ("`!v line(".") . ':'` $1 = ", *$1, sep='\n')
+print ("`!v line(".") . ':'` $1 = ", *$1, sep='\n\n\n')
 endsnippet
 
 snippet pl "ds print w " b
@@ -777,7 +777,7 @@ endsnippet
 
 # # <template name="up" value="print(*$SELECTION$)" description="print(*selection)" toReformat="false" toShortenFQNames="true">
 snippet pu "print(*unpacked, sep='\n')" b
-print(*${VISUAL}, sep='\n')
+print(*${VISUAL}, sep='\n\n\n')
 endsnippet
 
 # # <template name="re" value="return " description="return" toReformat="false" toShortenFQNames="true">
