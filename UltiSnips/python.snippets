@@ -688,10 +688,6 @@ snippet pmdoc "pocoo style module doc string" b
 $0
 endsnippet
 
-snippet pp "ds pretty print" b
-print ("`!v line(".") . ':'` $1 = ", $1)
-endsnippet
-
 snippet rr "ds repr" b
 def __repr__(self):
         items = ("%s = %r" % (k, v) for k, v in self.__dict__.items())
@@ -822,8 +818,13 @@ print(*$1, sep='\n\n\n')
 endsnippet
 
 # # <template name="pq" value="pprint($var$)" description="Pretty Print pprint() module" toReformat="false" toShortenFQNames="true">
-snippet pq "Pretty Print pprint() module" b
+snippet pp "Pretty Print pprint() module" b
 pprint($1)
+endsnippet
+
+snippet pr "pprint() then raise" b
+pprint($1)
+raise
 endsnippet
 
 # vim:ft=snippets:
