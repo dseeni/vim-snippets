@@ -21,4 +21,10 @@ function ${1:function_name}($2)
 	${3:" code}
 endfunction
 endsnippet
+
+
+snippet pl "print w/line number" b
+echom "`!v line(".") . ':'` $1 = " . $1
+endsnippet
+
 # vim:ft=snippets:
