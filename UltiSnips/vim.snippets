@@ -28,7 +28,6 @@ function ${1:function_name}($2)
 endfunction
 endsnippet
 
-
 snippet sf "function!" b
 function! s:${1:function_name}($2)
 	${3:" code}
@@ -41,9 +40,42 @@ function s:${1:function_name}($2)
 endfunction
 endsnippet
 
-
-snippet pl "print w/line number" b
+snippet pl "echo w/line number" b
 echom "`!v line(".") . ':'` $1 = " . $1
 endsnippet
 
+snippet p "ds echo w " b
+echom "`!v line(".") . ': '`" . $1
+endsnippet
+
 # vim:ft=snippets:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
