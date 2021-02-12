@@ -662,20 +662,20 @@ def __repr__(self):
 endsnippet
 
 snippet plu "ds print w * and \n" b
-print ("`!v line(".") . ':'` $1 = ", *$1, sep='\n\n\n')
+print ("`!v line(".").':'`$1 = ", *$1, sep='\n\n\n')
 endsnippet
 
 snippet pl "ds print w " b
-print ("`!v line(".") . ':'` $1 = ", $1)
+print ("`!v line(".").':'` $1 = ", $1)
 endsnippet
 
 snippet ppl "ds print w " b
-pprint ("`!v line(".") . ':'` $1 = ", $1)
+pprint ("`!v line(".").':'` $1 = ", $1)
 endsnippet
 
 # print('40:', "TYPE:" " = ", type())
 snippet ptp "print type" b
-print ("`!v line(".") . ': TYPE:'` $1 = ", type($1))
+print ("`!v line(".").': TYPE:'` $1 = ", type($1))
 endsnippet
 
 # <template name="ps" value="print($SELECTION$)" description="Surround with Print" toReformat="false" toShortenFQNames="true">
