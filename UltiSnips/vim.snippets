@@ -40,14 +40,31 @@ function s:${1:function_name}($2)
 endfunction
 endsnippet
 
-snippet pl "echo w/line number" b
-echom "`!v line(".") . ':'` $1 = " . $1
+snippet pl "echo w/ln" b
+echo "`!v line(".") . ':'` $1 = "| echo $1
 endsnippet
 
-snippet p "ds echo w " b
-echom "`!v line(".") . ':'`" . $1
+snippet p "ds echo w/ln " b
+echo "`!v line(".") . ':'` $1 = "| echo $1
 endsnippet
 
+snippet pel "print(echo) error log v:errors" b
+function! ErrorLog()
+  if len(v:errors) > 0
+    echo 'Errors Found: ' . len(v:errors)
+  else
+    echo 'All Tests Passed!'
+  endif
+  for i in v:errors
+    echo i
+  endfor
+endfunction
+call ErrorLog()
+endsnippet
+
+snippet e "echo " b
+echo $1
+endsnippet
 # vim:ft=snippets:
 
 
