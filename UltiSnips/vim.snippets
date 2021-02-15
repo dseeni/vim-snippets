@@ -40,12 +40,12 @@ function s:${1:function_name}($2)
 endfunction
 endsnippet
 
-snippet pl "echo w/ln" b
+snippet pl "echo dual line w/ln" b
 echo "`!v line(".") . ':'` $1 = "| echo $1
 endsnippet
 
-snippet p "ds echo w/ln " b
-echo "`!v line(".") . ':'` $1 = "| echo $1
+snippet p "ds echo single line w/ln " b
+echo "`!v line(".") . ':'` $1 = " . echo $1
 endsnippet
 
 snippet pel "print(echo) error log v:errors" b
