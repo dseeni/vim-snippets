@@ -54,13 +54,16 @@ snippet if "if (condition) { ... }"
 	if (${1:true}) {
 		${0:${VISUAL}}
 	}
-# if ... else
-snippet ife "if (condition) { ... } else { ... }"
-	if (${1:true}) {
-		${0:${VISUAL}}
-	} else {
-		${2}
-	}
+# -----------------------------------------------------------------------------
+# DEPRECATED: included in ultisnips folder
+# # if ... else
+# snippet ife "if (condition) { ... } else { ... }"
+# 	if (${1:true}) {
+# 		${2}
+# 	} else {
+# 		${0:${VISUAL}}
+# 	}
+# -----------------------------------------------------------------------------
 # tertiary conditional
 snippet ter
 	${1:/* condition */} ? ${2:/* if true */} : ${0:/* if false */}
@@ -99,11 +102,11 @@ snippet terr
 snippet ret
 	return ${0:result};
 snippet for "for (...) {...}"
-	for (var ${1:i} = 0, ${2:len} = ${3:Things.length}; $1 < $2; $1++) {
+	for (var i = 0; i < ${1:Things}.length; i++) {
 		${0:${VISUAL}}
 	}
 snippet forr "reversed for (...) {...}"
-	for (var ${2:i} = ${1:Things.length} - 1; $2 >= 0; $2--) {
+	for (var i = ${1:Things}.length - 1; i >= 0; i--) {
 		${0:${VISUAL}}
 	}
 snippet wh "(condition) { ... }"
