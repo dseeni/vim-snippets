@@ -158,13 +158,14 @@ snippet us
 'use strict'`!p snip.rv = semi(snip)`
 endsnippet
 
-snippet f
+snippet f "function"
 function ${1}(${2}) {
 	${0:${VISUAL}}${3}
 }${4}
 endsnippet
 
-snippet wlu "$.writeln unpack array"
+snippet wu "$.writeln unpack array"
+$.writeln("------------------------------------------");
 for (var i in $1) {
 	$.writeln("`!v line(".").': '`$1[",i,"] = ", JSON.stringify(${1:${VISUAL}}[i]), '\n');
 }
@@ -239,6 +240,10 @@ endsnippet
 snippet wrl "reflect object properties"
 $.writeln("`!v line(".").': Reflection: du_reflect('`$1)");
 du_reflect(${1:${VISUAL}});
+endsnippet
+
+snippet dp "deepcopy javascript"
+var ${1} = JSON.parse(JSON.stringify(${0:${VISUAL}}${2}));
 endsnippet
 
 # vim:ft=snippets:
