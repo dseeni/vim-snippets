@@ -150,7 +150,7 @@ do`!p snip.rv = keyword_spacing(snip)`{
 }`!p snip.rv = keyword_spacing(snip)`while`!p snip.rv = keyword_spacing(snip)`(${1:/* condition */})`!p snip.rv = semi(snip)`
 endsnippet
 
-snippet ret "Return statement"
+snippet r "Return statement"
 return ${VISUAL}$0`!p snip.rv = semi(snip)`
 endsnippet
 
@@ -170,8 +170,12 @@ for (var i in $1) {
 }
 endsnippet
 
-snippet wj "write json string"
+snippet wj "write json stringify"
 $.writeln("`!v line(".").': '`$1 = ", JSON.stringify(${1:${VISUAL}}));
+endsnippet
+
+snippet j "json stringify"
+JSON.stringify(${1:${VISUAL}})
 endsnippet
 
 snippet wi "write instanceof"
@@ -219,6 +223,9 @@ snippet aln "alert .length property with line number"
 alert("`!v line(".").': '`$1.length = ", ${1:${VISUAL}}.length);
 endsnippet
 
+snippet wb "write page break"
+$.writeln("\n----------------------------------------------------------------");
+endsnippet
 # vim:ft=snippets:
 
 
