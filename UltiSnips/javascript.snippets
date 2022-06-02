@@ -165,10 +165,12 @@ function ${1}(${2}) {
 endsnippet
 
 snippet wu "$.writeln unpack array"
+
 $.writeln("------------------------------------------");
 for (var i in $1) {
 	$.writeln("`!v line(".").': '`$1[",i,"] = ", JSON.stringify(${1:${VISUAL}}[i]), '\n');
 }
+
 endsnippet
 
 snippet wj "write json stringify"
@@ -248,6 +250,10 @@ endsnippet
 
 snippet rn "range"
 du_range(${1:start}, ${2:stop},${3})
+endsnippet
+
+snippet ar "Array"
+Array(${1})
 endsnippet
 
 # vim:ft=snippets:
