@@ -4,17 +4,21 @@ priority -50
 #  COMMON  #
 ############
 
+# -----------------------------------------------------------------------------
+# WARNING: snippets assigned here will overwrite snippets assigned in
+# vim-snippets\snippets\javascript can be overwritten
+# -----------------------------------------------------------------------------
+
 # The smart snippets use a global options called
 # "g:ultisnips_javascript.{option}" which can control the format
 # of trailing semicolon, space before function paren, etc.
-#
+
 # e.g.
 # let g:ultisnips_javascript = {
 #      \ 'keyword-spacing': 'always',
 #      \ 'semi': 'never',
 #      \ 'space-before-function-paren': 'always',
 #      \ }
-
 
 global !p
 from javascript_snippets import (
@@ -153,5 +157,25 @@ endsnippet
 snippet us
 'use strict'`!p snip.rv = semi(snip)`
 endsnippet
+
+snippet f
+function ${1}(${2}) {
+	${0:${VISUAL}}${3}
+}${4}
+endsnippet
+
+
+snippet wlu "$.writeln unpack array"
+for (var i in $1) {
+	$.writeln("`!v line(".").':'`$1[",i,"] = ", JSON.stringify(${1:${VISUAL}}[i]));
+}
+endsnippet
+
+
+
+
+
+
+
 
 # vim:ft=snippets:
