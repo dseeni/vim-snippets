@@ -173,7 +173,11 @@ endsnippet
 
 
 snippet wj "write json string"
-$.writeln("`!v line(".").': '`$1 = ", JSON.stringify(${1:${VISUAL}}), '\n');
+$.writeln("`!v line(".").': '`$1 = ", JSON.stringify(${1:${VISUAL}}));
+endsnippet
+
+snippet wi "write instanceof"
+$.writeln("`!v line(".").': '`$1 instanceof $2 = ", ${1:${VISUAL}} instanceof ${2});
 endsnippet
 
 
