@@ -164,13 +164,11 @@ function ${1}(${2}) {
 }${4}
 endsnippet
 
-
 snippet wlu "$.writeln unpack array"
 for (var i in $1) {
 	$.writeln("`!v line(".").': '`$1[",i,"] = ", JSON.stringify(${1:${VISUAL}}[i]), '\n');
 }
 endsnippet
-
 
 snippet wj "write json string"
 $.writeln("`!v line(".").': '`$1 = ", JSON.stringify(${1:${VISUAL}}));
@@ -188,12 +186,43 @@ snippet w "$.writeln"
 $.writeln("`!v line(".").': '`$1 = ", ${1:${VISUAL}});
 endsnippet
 
-snippet a "$.writeln"
+snippet a "alert line number"
 alert(["`!v line(".").': '`$1 = ", ${1:${VISUAL}}]);
 endsnippet
 
-
-
-
+snippet wo "write Object.prototype.toString.call()"
+$.writeln("`!v line(".").': '`Object.prototype.toString.call($1) = ",
+	Object.prototype.toString.call(${1:${VISUAL}}));
+endsnippet
 
 # vim:ft=snippets:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
