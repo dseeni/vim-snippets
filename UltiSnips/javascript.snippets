@@ -233,12 +233,12 @@ $.writeln("\n================================================================");
 endsnippet
 
 snippet ref "reflect object properties"
-dsu_reflect(${1:${VISUAL}});
+du_reflect(${1:${VISUAL}});
 endsnippet
 
 snippet wref "reflect object properties"
-
-$.writeln("`!v line(".").': dsu_reflect('`$1) = ", dsu_reflect(${1:${VISUAL}}));
+$.writeln("`!v line(".").': Reflection: du_reflect('`$1)");
+du_reflect(${1:${VISUAL}});
 endsnippet
 
 # vim:ft=snippets:
