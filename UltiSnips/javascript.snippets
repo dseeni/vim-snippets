@@ -167,7 +167,7 @@ endsnippet
 
 snippet wlu "$.writeln unpack array"
 for (var i in $1) {
-	$.writeln("`!v line(".").':'`$1[",i,"] = ", JSON.stringify(${1:${VISUAL}}[i]));
+	$.writeln("`!v line(".").':'`$1[",i,"] = ", JSON.stringify(${1:${VISUAL}}[i]), '\n');
 }
 endsnippet
 
