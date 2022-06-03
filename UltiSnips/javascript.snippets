@@ -166,8 +166,9 @@ endsnippet
 
 snippet wu "$.writeln unpack array"
 
-$.writeln("------------------------------------------");
+$.writeln("==========================================");
 for (var i in $1) {
+	$.writeln("------------------------------------------");
 	$.writeln("`!v line(".").': '`$1[",i,"] = ", JSON.stringify(${1:${VISUAL}}[i]), '\n');
 }
 
