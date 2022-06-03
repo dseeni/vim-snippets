@@ -174,15 +174,19 @@ for (var i in $1) {
 
 endsnippet
 
-snippet wj "write json stringify"
+snippet wjn "pretty write json stringify with line number"
 $.writeln("`!v line(".").': '`$1 = ", JSON.stringify(${1:${VISUAL}}));
+endsnippet
+
+snippet wj "write json stringify"
+$.writeln(JSON.stringify(${1:${VISUAL}}));
 endsnippet
 
 snippet j "json stringify"
 JSON.stringify(${1:${VISUAL}})
 endsnippet
 
-snippet wi "write instanceof"
+snippet wi "pretty write instanceof"
 $.writeln("`!v line(".").': '`$1 instanceof $2 = ", ${1:${VISUAL}} instanceof ${2});
 endsnippet
 
@@ -194,16 +198,16 @@ snippet wl "write length property"
 $.writeln(${1:${VISUAL}}.length);
 endsnippet
 
-snippet wn "$.writeln with line number"
+snippet wn "pretty write with line number"
 $.writeln("`!v line(".").': '`$1 = ", ${1:${VISUAL}});
 endsnippet
 
-snippet wo "write Object.prototype.toString.call()"
+snippet wo "pretty write Object.prototype.toString.call()"
 $.writeln("`!v line(".").': '`Object.prototype.toString.call($1) = ",
 	Object.prototype.toString.call(${1:${VISUAL}}));
 endsnippet
 
-snippet wt "write Object.prototype.toString.call()"
+snippet wt "pretty write Object.prototype.toString.call()"
 $.writeln("`!v line(".").': '`Object.prototype.toString.call($1) = ",
 	Object.prototype.toString.call(${1:${VISUAL}}));
 endsnippet
@@ -220,15 +224,15 @@ snippet a "alert"
 alert([${1:${VISUAL}}]);
 endsnippet
 
-snippet an "alert with line number"
+snippet an "pretty alert with line number"
 alert(["`!v line(".").': '`$1 = ", ${1:${VISUAL}}]);
 endsnippet
 
-snippet al "alert .length property"
+snippet al "pretty alert .length property"
 alert(${1:${VISUAL}}.length);
 endsnippet
 
-snippet aln "alert .length property with line number"
+snippet aln "pretty alert .length property with line number"
 alert("`!v line(".").': '`$1.length = ", ${1:${VISUAL}}.length);
 endsnippet
 
@@ -240,7 +244,7 @@ snippet re "reflect object properties"
 du_reflect(${1:${VISUAL}});
 endsnippet
 
-snippet wre "reflect object properties"
+snippet wre "pretty reflect object properties"
 $.writeln("------------------------------------------");
 $.writeln("`!v line(".").': Reflection: du_reflect('`$1)");
 du_reflect(${1:${VISUAL}});
