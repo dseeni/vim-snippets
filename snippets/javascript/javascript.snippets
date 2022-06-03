@@ -101,11 +101,11 @@ snippet terr
 # return
 snippet ret
 	return ${0:result};
-snippet for "for (...) {...}"
+snippet fo "for (...) {...}"
 	for (var i = 0; i < ${1:Things}.length; i++) {
 		${0:${VISUAL}}
 	}
-snippet forr "reversed for (...) {...}"
+snippet for "reversed for (...) {...}"
 	for (var i = ${1:Things}.length - 1; i >= 0; i--) {
 		${0:${VISUAL}}
 	}
@@ -118,7 +118,7 @@ snippet do "do { ... } while (condition)"
 		${0:${VISUAL}}
 	} while (${1:/* condition */});
 # For in loop
-snippet fori
+snippet foi
 	for (var ${1:prop} in ${2:object}) {
 		${0:$2[$1]}
 	}
@@ -310,7 +310,7 @@ snippet clac
 			${0:${VISUAL}}
 		}
 	}
-snippet foro "for (const prop of object}) { ... }"
+snippet foo "for (const prop of object}) { ... }"
 	for (const ${1:prop} of ${2:object}) {
 		${0:$1}
 	}
