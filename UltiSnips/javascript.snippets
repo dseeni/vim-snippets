@@ -169,21 +169,21 @@ snippet wu "$.writeln unpack array"
 $.writeln("==========================================");
 for (var i in $1) {
 	$.writeln("------------------------------------------");
-	$.writeln("`!v line(".").': '`$1[",i,"] = ", JSON.stringify(${1:${VISUAL}}[i]), '\n');
+	$.writeln("`!v line(".").': '`$1[",i,"] = ", JSON.stringify(${1:${VISUAL}}[i], null, '\t'), '\n');
 }
 
 endsnippet
 
 snippet wjn "pretty write json stringify with line number"
-$.writeln("`!v line(".").': '`$1 = ", JSON.stringify(${1:${VISUAL}}));
+$.writeln("`!v line(".").': '`$1 = ", JSON.stringify(${1:${VISUAL}}, null, '\t'));
 endsnippet
 
 snippet wj "write json stringify"
-$.writeln(JSON.stringify(${1:${VISUAL}}));
+$.writeln(JSON.stringify(${1:${VISUAL}}, null, '\t'));
 endsnippet
 
 snippet j "json stringify"
-JSON.stringify(${1:${VISUAL}})
+JSON.stringify(${1:${VISUAL}}, null, '\t')
 endsnippet
 
 snippet wi "pretty write instanceof"
@@ -251,7 +251,7 @@ du_reflect(${1:${VISUAL}});
 endsnippet
 
 snippet dp "deepcopy javascript"
-var ${1} = JSON.parse(JSON.stringify(${0:${VISUAL}}${2}));
+var ${1} = JSON.parse(JSON.stringify(${0:${VISUAL}}${2}, null, '\t'));
 endsnippet
 
 snippet ra "range"
@@ -260,6 +260,10 @@ endsnippet
 
 snippet ar "Array"
 Array(${1})
+endsnippet
+
+snippet t "Throw Error"
+throw new Error();
 endsnippet
 
 # vim:ft=snippets:
