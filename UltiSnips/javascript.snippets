@@ -150,7 +150,7 @@ do`!p snip.rv = keyword_spacing(snip)`{
 }`!p snip.rv = keyword_spacing(snip)`while`!p snip.rv = keyword_spacing(snip)`(${1:/* condition */})`!p snip.rv = semi(snip)`
 endsnippet
 
-snippet r "Return statement"
+snippet re "Return statement"
 return${VISUAL}$0`!p snip.rv = semi(snip)`
 endsnippet
 
@@ -169,7 +169,7 @@ snippet wu "$.writeln unpack array"
 $.writeln("==========================================");
 for (var i in $1) {
 	$.writeln("------------------------------------------");
-	$.writeln("`!v line(".").': '`$1[",i,"] = ", JSON.stringify(${1:${VISUAL}}[i]));
+	$.writeln("`!v line(".").': '`$1[",i,"] = ", (${1:${VISUAL}}[i]).toSource());
 }
 
 endsnippet
@@ -216,8 +216,8 @@ snippet o "Object.prototype.toString.call()"
 Object.prototype.toString.call(${1:${VISUAL}})
 endsnippet
 
-snippet w "$.writeln"
-$.writeln(${1:${VISUAL}});
+snippet w "$.writeln with .toSource() method for raw output"
+$.writeln(${1:${VISUAL}}.toSource()${2});
 endsnippet
 
 snippet al "alert"
@@ -240,7 +240,7 @@ snippet wb "write page break"
 $.writeln("\n================================================================");
 endsnippet
 
-snippet re "reflect object properties"
+snippet r "reflect object properties"
 du_reflect(${1:${VISUAL}});
 endsnippet
 
@@ -251,7 +251,7 @@ du_reflect(${1:${VISUAL}});
 endsnippet
 
 snippet dp "deepcopy javascript"
-var ${1} = JSON.parse(JSON.stringify(${0:${VISUAL}}${2}));
+var ${1} = eval(${2:${VISUAL}}.toSource());
 endsnippet
 
 snippet ra "range"
@@ -259,7 +259,7 @@ du_range(${1:${VISUAL}})
 endsnippet
 
 snippet a "Array"
-Array(${1})
+Array(${1:${VISUAL}})
 endsnippet
 
 snippet t "Throw Error"
