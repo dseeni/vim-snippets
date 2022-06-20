@@ -50,14 +50,14 @@ endsnippet
 
 snippet pel "print(echo) error log v:errors" b
 function! ErrorLog()
-  if len(v:errors) > 0
-    echo 'Errors Found: ' . len(v:errors)
-  else
-    echo 'All Tests Passed!'
-  endif
-  for i in v:errors
-    echo i
-  endfor
+	if len(v:errors) > 0
+		echo 'Errors Found: ' . len(v:errors)
+	else
+		echo 'All Tests Passed!'
+	endif
+	for i in v:errors
+		echo i
+	endfor
 endfunction
 call ErrorLog()
 endsnippet
