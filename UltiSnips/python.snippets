@@ -655,149 +655,149 @@ snippet pmdoc "pocoo style module doc string" b
 $0
 endsnippet
 
-snippet rr "ds repr" i
+snippet rr "ds repr" w
 def __repr__(self):
         items = ("%s = %r" % (k, v) for k, v in self.__dict__.items())
         return "%s: {%s}" % (self.__class__.__name__, ', '.join(items))
 endsnippet
 
-snippet plu "ds print w * and \n" i
+snippet plu "ds print w * and \n" w
 print("`!v line(".").':'`$1 = ", *$1, sep='\n\n\n')
 endsnippet
 
-snippet pl "ds print w line nmbr" i
+snippet pl "ds print w line nmbr" w
 print("`!v line(".").':'` $1 = ", $1)
 endsnippet
 
-snippet ppl "ds pprint w line nmbr" i
+snippet ppl "ds pprint w line nmbr" w
 pprint("`!v line(".").':'` $1 = ", $1)
 endsnippet
 
-snippet pe "print(len(cursor))" i
+snippet pe "print(len(cursor))" w
 print(len($1))
 endsnippet
 
 # print('40:', "TYPE:" " = ", type())
-snippet ptp "print type" i
+snippet ptp "print type" w
 print("`!v line(".").': TYPE:'` $1 = ", type($1))
 endsnippet
 
 # <template name="ps" value="print($SELECTION$)" description="Surround with Print" toReformat="false" toShortenFQNames="true">
-snippet p "Surround with Print" i
+snippet p "Surround with Print" w
 print(${1:${VISUAL}})
 endsnippet
 
 # <template name="itr" value="for $VAR$ in $ITERABLE$:&#10;    $END$" description="Iterate (for ... in ...)" toReformat="false" toShortenFQNames="true">
 # ${3:LICENSE_NAME}
-snippet fin "Iterate (for ... in ...)" i
+snippet fin "Iterate (for ... in ...)" w
 for ${1:VAR} in ${2:range($3)}:
     ${4:DO}
 endsnippet
 
 # <template name="pa" value="pass" description="pass" toReformat="false" toShortenFQNames="true">
-snippet pa "pass" i
+snippet pa "pass" w
 pass
 endsnippet
 
 # <template name="c" value="continue" description="continue" toReformat="false" toShortenFQNames="true">
-snippet c "continue" i
+snippet c "continue" w
 continue
 endsnippet
 
 # <template name="b" value="break" description="break" toReformat="false" toShortenFQNames="true">
-snippet i "break" b
+snippet i "break" w
 break
 endsnippet
 
 # <template name="e" value="except " description="except" toReformat="false" toShortenFQNames="true">
-snippet e "except" i
+snippet e "except" w
 except
 endsnippet
 
 # <template name="ra" value="raise " description="raise" toReformat="false" toShortenFQNames="true">
-snippet r "raise" i
+snippet r "raise" w
 raise Exception
 endsnippet
 
 # <template name="r" value="range($var1$)$var2$" description="range" toReformat="false" toShortenFQNames="true">
 # range($1)
-snippet ra "range" i
+snippet ra "range" w
 range(${1:${VISUAL}})
 endsnippet
 
 # # <template name="cl" value="class $var$:" description="class" toReformat="false" toShortenFQNames="true">
-snippet cl "class" i
+snippet cl "class" w
 class $1:
 endsnippet
 
 # # <template name="d" value="def $var$($var1$):" description="def" toReformat="false" toShortenFQNames="true">
-snippet d "def" i
+snippet d "def" w
 def $1 ($2):
     $3
 endsnippet
 
 # # <template name="lt" value="list($SELECTION$)" description="list" toReformat="false" toShortenFQNames="true">
-snippet ls "list" i
+snippet ls "list" w
 list(${1:${VISUAL}})
 endsnippet
 
 # # <template name="t" value="tuple($SELECTION$)" description="tuple()" toReformat="false" toShortenFQNames="true">
-snippet t "tuple()" i
+snippet t "tuple()" w
 tuple(${VISUAL})
 endsnippet
 
 # # <template name="up" value="print(*$SELECTION$)" description="print(*selection)" toReformat="false" toShortenFQNames="true">
-snippet pu "print(*unpacked, sep='\n\n\n')" i
+snippet pu "print(*unpacked, sep='\n\n\n')" w
 print(*${VISUAL}, sep='\n\n\n')
 endsnippet
 
 # # <template name="re" value="return " description="return" toReformat="false" toShortenFQNames="true">
-snippet re "return" i
+snippet re "return" w
 return
 endsnippet
 
 # # <template name="ne" value="next($SELECTION$)" description="next(selection)" toReformat="false" toShortenFQNames="true">
-snippet ne "next(selection)" i
+snippet ne "next(selection)" w
 next(${1:${VISUAL}})
 endsnippet
 
 # # <template name="pt" value="print(type($var1$))" description="print(type())" toReformat="false" toShortenFQNames="true">
-snippet pt "print(type())" i
+snippet pt "print(type())" w
 print(type(${1:${VISUAL}}))
 endsnippet
 
 # # <template name="ty" value="type($SELECTION$)" description="type(selection)" toReformat="false" toShortenFQNames="true">
 # type(${1:${VISUAL}})
-snippet ty "type(selection)" i
+snippet ty "type(selection)" w
 type($1)
 endsnippet
 
 # # <template name="yd" value="yield" description="yield" toReformat="false" toShortenFQNames="true">
-snippet yd "yield" i
+snippet yd "yield" w
 yield
 endsnippet
 
 # # <template name="ln" value="len($SELECTION$)" description="len" toReformat="false" toShortenFQNames="true">
-snippet ln "len" i
+snippet ln "len" w
 len(${1:${VISUAL}})
 endsnippet
 
 # # <template name="pb" value="# # ----------------------------------------------------------------------------" description="page_break" toReformat="false" toShortenFQNames="true">
-# snippet pb "page_break" b
+# snippet pb "page_break" w
 # # # ----------------------------------------------------------------------------
 # endsnippet
 
 # # <template name="pn" value="print(*$var$, sep='\n\n\n')" description="print with line break" toReformat="false" toShortenFQNames="true">
-snippet pn "print with line break" i
+snippet pn "print with line break" w
 print(*$1, sep='\n\n\n')
 endsnippet
 
 # # <template name="pq" value="pprint($var$)" description="Pretty Print pprint() module" toReformat="false" toShortenFQNames="true">
-snippet pp "Pretty Print pprint() module" i
+snippet pp "Pretty Print pprint() module" w
 pprint($1)
 endsnippet
 
-snippet pr "pprint() then raise" i
+snippet pr "pprint() then raise" w
 pprint($1)
 raise
 endsnippet
