@@ -216,8 +216,12 @@ snippet o "Object.prototype.toString.call()"
 Object.prototype.toString.call(${1:${VISUAL}})
 endsnippet
 
-snippet w "$.writeln with .toSource() method for raw output"
+snippet ws "$.writeln with .toSource() method for raw output"
 $.writeln(${1:${VISUAL}}.toSource()${2});
+endsnippet
+
+snippet w "$.writeln"
+$.writeln(${1:${VISUAL}});
 endsnippet
 
 snippet al "alert"
