@@ -165,13 +165,10 @@ function ${1}(${2}) {
 endsnippet
 
 snippet wu "$.writeln unpack array"
-
-$.writeln("==========================================");
-for (var i in $1) {
+for (var i = 0; i < ${1:${VISUAL}}.length; i++) {
 	$.writeln("------------------------------------------");
-	$.writeln("`!v line(".").': '`$1[",i,"] = ", (${1:${VISUAL}}[i]).toSource());
+	$.writeln("`!v line(".").': '`$1[",i,"] = ", $1[i].toSource());
 }
-
 endsnippet
 
 snippet wjn "pretty write json stringify with line number"
