@@ -122,4 +122,17 @@ snippet ;, "Ahk String" Ai
 %${1:${VISUAL}}%
 endsnippet
 
+snippet pq
+${0:`!v split(&commentstring, '%s')[0]`} TODO: DEFINE FUNCTION
+${0} Syntax: `!v &filetype`
+${0} Function Name: ${1:function_name}
+${0} Function Description: ${2:description}
+${0} Inputs:
+${0}    ${3:NONE}
+${0} Outputs:
+${0}    ${4:NONE}
+${0} Steps:
+${0}    ${5:}
+endsnippet
+
 # vim:ft=snippets:
