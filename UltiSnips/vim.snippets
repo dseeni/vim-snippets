@@ -17,25 +17,25 @@ let $1 = 1$3
 endsnippet
 
 snippet f "function!" b
-function! ${1:function_name}($2)
+function! ${1:Function_Name}($2)
 	${3:" code}
 endfunction
 endsnippet
 
-snippet fu "function" b
-function ${1:function_name}($2)
+snippet fu "function no !" b
+function ${1:Function_Name}($2)
 	${3:" code}
 endfunction
 endsnippet
 
-snippet sf "function!" b
-function! s:${1:function_name}($2)
+snippet sf "s:function!" b
+function! s:${1:Function_Name}($2)
 	${3:" code}
 endfunction
 endsnippet
 
-snippet sfu "function" b
-function s:${1:function_name}($2)
+snippet sfu "s:function no !" b
+function s:${1:Function_Name}($2)
 	${3:" code}
 endfunction
 endsnippet
@@ -66,13 +66,16 @@ snippet e "echo . single space" b
 echo $1
 endsnippet
 
-snippet s "echo . no space" b
+snippet ec "echo . no space" b
 echo$1
 endsnippet
 
-
 snippet em "echom . single space" b
 echom $1
+endsnippet
+
+snippet s "SID" i
+<SID>${1:${VISUAL}}
 endsnippet
 
 snippet sm "echom . no space" b
