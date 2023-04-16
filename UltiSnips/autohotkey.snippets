@@ -1,0 +1,14 @@
+priority -50
+
+snippet s "SendInput Hotkey Map" i
+${0:${VISUAL}}::
+{
+	BlockInput, ON
+	SendInput, ${1:${VISUAL}}
+}}
+	BlockInput, OFF
+	return
+}
+endsnippet
+
+# vim:ft=snippets:
