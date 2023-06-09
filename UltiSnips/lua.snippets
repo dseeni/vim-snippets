@@ -8,25 +8,25 @@ snippet #! "#!/usr/bin/env lua" b
 $0
 endsnippet
 
-snippet !fun(ction)?! "New function" br
+snippet !f(unction)?! "New function" br
 function ${1:new_function}(${2:args})
 	$0
 end
 endsnippet
 
-snippet forp "pair for loop" b
+snippet fp "pair for loop" b
 for ${1:name},${2:val} in pairs(${3:table_name}) do
 	$0
 end
 endsnippet
 
-snippet fori "ipair for foop" b
+snippet fi "ipair for foop" b
 for ${1:idx},${2:val} in ipairs(${3:table_name}) do
 	$0
 end
 endsnippet
 
-snippet for "numeric for loop" b
+snippet fo "numeric for loop" b
 for ${1:i}=${2:first},${3:last}${4/^..*/(?0:,:)/}${4:step} do
 	$0
 end
@@ -38,13 +38,13 @@ do
 end
 endsnippet
 
-snippet repeat "repeat loop" b
+snippet re "repeat loop" b
 repeat
 	$1
 until $0
 endsnippet
 
-snippet while "while loop" b
+snippet wh "while loop" b
 while $1 do
 	$0
 end
@@ -82,7 +82,7 @@ else
 end
 endsnippet
 
-snippet pcall "pcall statement" b
+snippet pc "pcall statement" b
 local ok, err = pcall(${1:your_function})
 if not ok then
 	handler(${2:ok, err})
@@ -91,7 +91,7 @@ ${3:else
 }end
 endsnippet
 
-snippet local "local x = 1"
+snippet l "local x = 1"
 local ${1:x} = ${0:1}
 endsnippet
 
