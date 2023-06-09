@@ -8,44 +8,117 @@ snippet #! "#!/usr/bin/env lua" b
 $0
 endsnippet
 
-snippet !f(unction)?! "New function" br
-function ${1:new_function}(${2:args})
+
+
+snippet l "local" bi
+local ${1:x} = ${0:1}
+endsnippet
+
+snippet f "fn" bi
+function ${1:fname}(${2:...})
+	${0:${VISUAL}}
+end
+endsnippet
+
+snippet fo "for" bi
+for ${1:i}=${2:1},${3:10} do
+	${0:${VISUAL}}
+end
+endsnippet
+
+snippet fp "for-pairs" bi
+for ${1:i},${2:v} in pairs(${3:table_name}) do
+	${0:${VISUAL}}
+end
+endsnippet
+
+snippet fi "for-ipairs" bi
+for ${1:i},${2:v} in ipairs(${3:table_name}) do
+	${0:${VISUAL}}
+end
+endsnippet
+
+snippet if "if" w
+if ${1:condition} then
+	${2:${VISUAL}}
+end
+endsnippet
+
+snippet ife "if/then/else" w
+if ${1:${VISUAL}} then
+	${2:-- if condition}
+else
+	${0:-- else}
+end
+endsnippet
+
+snippet elf "elseif" w
+elseif ${1:condition} then
+	${0:${VISUAL}}
+endsnippet
+
+snippet rp "repeat" w
+repeat
+	${1:--body}
+until ${0:${VISUAL}}
+endsnippet
+
+snippet ret "return" w
+return ${0:${VISUAL}}
+endsnippet
+
+snippet while "while" w
+while ${1:condition} do
+	${0:${VISUAL}}
+end
+endsnippet
+
+snippet p "print"  bi
+p(${VISUAL})
+endsnippet
+
+snippet im "import" w
+import "${1:${VISUAL}}"
+endsnippet
+
+snippet f "New function" bwi
+function ${1:${VISUAL}}(${2:args})
 	$0
 end
 endsnippet
 
 snippet fp "pair for loop" b
-for ${1:name},${2:val} in pairs(${3:table_name}) do
+for ${1:name},${2:val} in pairs(${3:${VISUAL}}) do
 	$0
 end
 endsnippet
 
 snippet fi "ipair for foop" b
-for ${1:idx},${2:val} in ipairs(${3:table_name}) do
+for ${1:idx},${2:val} in ipairs(${3:${VISUAL}}) do
 	$0
 end
 endsnippet
 
 snippet fo "numeric for loop" b
 for ${1:i}=${2:first},${3:last}${4/^..*/(?0:,:)/}${4:step} do
-	$0
+	${1:${VISUAL}}
 end
 endsnippet
 
-snippet d "do block"
+snippet d "do block" b
 do
-	$0
+	${1:${VISUAL}}
 end
 endsnippet
 
-snippet re "repeat loop" b
+snippet r "repeat loop" b
 repeat
-	$1
+	${1:${VISUAL}}
 until $0
 endsnippet
 
 snippet w "while loop" b
-while $1 do
+while ${1:${VISUAL}} do
 	$0
 end
 endsnippet
@@ -82,8 +155,8 @@ else
 end
 endsnippet
 
-snippet pc "pcall statement" b
-local ok, err = pcall(${1:your_function})
+snippet pc "pcall statement" bi
+local ok, err = pcall(${1:${VISUAL}})
 if not ok then
 	handler(${2:ok, err})
 ${3:else
@@ -91,8 +164,16 @@ ${3:else
 }end
 endsnippet
 
-snippet l "local x = 1"
-local ${1:x} = ${0:1}
+snippet l "local x = 1" bi
+local ${1:${VISUAL}} = ${0:1}
+endsnippet
+
+snippet pt "p(type(var))" bi
+p(type(${1:${VISUAL}}))
+endsnippet
+
+snippet t "type(var)" bi
+type(${1:${VISUAL}})
 endsnippet
 
 # vim:ft=snippets:

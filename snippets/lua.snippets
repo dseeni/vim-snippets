@@ -32,17 +32,17 @@ snippet ife
 snippet elf
 	elseif ${1:condition} then
 		${0:--body}
-snippet rpt
+snippet rp
 	repeat
 		${1:--body}
 	until ${0:condition}
-snippet re
+snippet ret
 	return ${0:condition}
 snippet while
 	while ${1:condition} do
 		${0:--body}
 	end
 snippet p
-	p(${1:thing})
+	p(${VISUAL}$0)
 snippet im
 	import "${1:import file}"
