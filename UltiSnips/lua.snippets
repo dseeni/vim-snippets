@@ -8,12 +8,6 @@ snippet #! "#!/usr/bin/env lua" b
 $0
 endsnippet
 
-
-
-snippet l "local" bi
-local ${1:x} = ${0:1}
-endsnippet
-
 snippet f "fn" bi
 function ${1:fname}(${2:...})
 	${0:${VISUAL}}
@@ -26,15 +20,21 @@ for ${1:i}=${2:1},${3:10} do
 end
 endsnippet
 
-snippet fp "for-pairs" bi
-for ${1:i},${2:v} in pairs(${3:table_name}) do
-	${0:${VISUAL}}
+snippet fon "numeric for loop" b
+for ${1:i}=${2:first},${3:last}${4/^..*/(?0:,:)/}${4:step} do
+	${1:${VISUAL}}
 end
 endsnippet
 
-snippet fi "for-ipairs" bi
-for ${1:i},${2:v} in ipairs(${3:table_name}) do
-	${0:${VISUAL}}
+snippet fp "pair for loop" b
+for ${1:name},${2:val} in pairs(${3:${VISUAL}}) do
+	$0
+end
+endsnippet
+
+snippet fi "ipair for for loop" bi
+for ${1:idx},${2:val} in ipairs(${3:${VISUAL}}) do
+	$0
 end
 endsnippet
 
@@ -81,30 +81,6 @@ snippet im "import" w
 import "${1:${VISUAL}}"
 endsnippet
 
-snippet f "New function" bwi
-function ${1:${VISUAL}}(${2:args})
-	$0
-end
-endsnippet
-
-snippet fp "pair for loop" b
-for ${1:name},${2:val} in pairs(${3:${VISUAL}}) do
-	$0
-end
-endsnippet
-
-snippet fi "ipair for foop" b
-for ${1:idx},${2:val} in ipairs(${3:${VISUAL}}) do
-	$0
-end
-endsnippet
-
-snippet fo "numeric for loop" b
-for ${1:i}=${2:first},${3:last}${4/^..*/(?0:,:)/}${4:step} do
-	${1:${VISUAL}}
-end
-endsnippet
-
 snippet d "do block" b
 do
 	${1:${VISUAL}}
@@ -123,17 +99,11 @@ while ${1:${VISUAL}} do
 end
 endsnippet
 
-snippet if "if statement" b
-if $1 then
-	$0
-end
-endsnippet
-
 snippet ife "if/else statement" b
 if $1 then
-	$2
+$2
 else
-	$0
+$0
 end
 endsnippet
 
@@ -164,8 +134,8 @@ ${3:else
 }end
 endsnippet
 
-snippet l "local x = 1" bi
-local ${1:${VISUAL}} = ${0:1}
+snippet l "local x = _" bi
+local ${1:${VISUAL}} = ${0:}
 endsnippet
 
 snippet pt "p(type(var))" bi
