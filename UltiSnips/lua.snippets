@@ -18,6 +18,10 @@ local function ${1:fname}(${2:...})
 end
 endsnippet
 
+snippet fa "anonymous fn" bi
+${VISUAL} = function($1) $2 end$0
+endsnippet
+
 snippet fn "fn" bi
 function ${1:fname}(${2:...})
 	${0:${VISUAL}}
@@ -46,6 +50,10 @@ snippet fi "ipair loop" bi
 for ${3:_}, ${2:v} in ipairs(${1:${VISUAL}}) do
 	$0
 end
+endsnippet
+
+snippet s "string append" bi
+.. $0
 endsnippet
 
 snippet if "if" w
