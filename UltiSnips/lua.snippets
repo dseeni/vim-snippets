@@ -8,6 +8,10 @@ snippet #! "#!/usr/bin/env lua" b
 $0
 endsnippet
 
+snippet dl "disable LSP next line"
+$1---@diagnostic disable-next-line
+endsnippet
+
 snippet f "local fn" bi
 local function ${1:fname}(${2:...})
 	${0:${VISUAL}}
