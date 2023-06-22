@@ -36,14 +36,14 @@ for ${1:i}=${2:first},${3:last}${4/^..*/(?0:,:)/}${4:step} do
 end
 endsnippet
 
-snippet fp "pair for loop" b
+snippet fp "pair loop" bi
 for ${1:name}, ${2:val} in pairs(${3:${VISUAL}}) do
 	$0
 end
 endsnippet
 
-snippet fi "ipair for loop" bi
-for ${2:_}, ${1:i} in ipairs(${3:${VISUAL}}) do
+snippet fi "ipair loop" bi
+for ${3:_}, ${2:v} in ipairs(${1:${VISUAL}}) do
 	$0
 end
 endsnippet
