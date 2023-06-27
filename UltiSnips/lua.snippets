@@ -12,6 +12,10 @@ snippet dl "disable LSP next line"
 $1---@diagnostic disable-next-line
 endsnippet
 
+snippet t "type annotation"
+---@param $1
+endsnippet
+
 snippet f "local fn" bi
 local function ${1:fname}(${2:...})
 	${0:${VISUAL}}
@@ -19,7 +23,7 @@ end
 endsnippet
 
 snippet fa "anonymous fn" bi
-${VISUAL}= function($1) $2 end$0
+${VISUAL} = function($1) $2 end$0
 endsnippet
 
 snippet fn "fn" bi
@@ -53,7 +57,7 @@ end
 endsnippet
 
 snippet s "string append" bi
-.. $0
+..$0
 endsnippet
 
 snippet if "if" w
@@ -168,7 +172,7 @@ snippet pt "p(type(var))" bi
 p(type(${1:${VISUAL}}))
 endsnippet
 
-snippet t "type(var)" bi
+snippet tf "typefn(var)" bi
 type(${1:${VISUAL}})
 endsnippet
 
