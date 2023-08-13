@@ -23,11 +23,17 @@ end
 endsnippet
 
 snippet fa "anonymous fn" bi
-= function(${1})${2}end
+function(${1})${2}end
 endsnippet
 
 snippet fn "fn" bi
-function ${1:fname}(${2:...})
+_G.${1:fname} = function(${2:...})
+	${0:${VISUAL}}
+end
+endsnippet
+
+snippet fm "fn" bi
+_M.${1:fname} = function(${2:...})
 	${0:${VISUAL}}
 end
 endsnippet
@@ -85,22 +91,16 @@ repeat
 until ${0:${VISUAL}}
 endsnippet
 
-snippet rn "force return inside function" bw
-i$0f true then return end
+snippet rn "force return inside function" b
+if true then return end
 endsnippet
 
-snippet ret "return" w
+snippet re "return" w
 return ${0:${VISUAL}}
 endsnippet
 
-snippet while "while" w
-while ${1:condition} do
-	${0:${VISUAL}}
-end
-endsnippet
-
 snippet p "print"  bi
-p(${1:${VISUAL}})
+pp(${1:${VISUAL}})
 endsnippet
 
 snippet im "import" w
@@ -113,7 +113,7 @@ do
 end
 endsnippet
 
-snippet r "repeat loop" b
+snippet rl "repeat loop" b
 repeat
 	${1:${VISUAL}}
 until $0
