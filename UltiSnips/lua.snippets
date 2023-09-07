@@ -17,7 +17,7 @@ snippet t "type annotation"
 endsnippet
 
 snippet f "local fn" bi
-local function ${1:fname}(${2:...})
+local function ${1:fname}(${2:})
 	${0:${VISUAL}}
 end
 endsnippet
@@ -27,13 +27,13 @@ function(${1})${0:${VISUAL}}${2}end
 endsnippet
 
 snippet fn "fn" bi
-_G.${1:fname} = function(${2:...})
+_G.${1:fname} = function(${2:})
 	${0:${VISUAL}}
 end
 endsnippet
 
 snippet fm "fn" bi
-M.${1:fname} = function(${2:...})
+M.${1:fname} = function(${2:})
 	${0:${VISUAL}}
 end
 endsnippet
