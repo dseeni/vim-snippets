@@ -17,7 +17,7 @@ snippet t "type annotation"
 endsnippet
 
 snippet f "local fn" bi
-local function ${1:fname}(${2:})
+local function ${1:}(${2:})
 	${0:${VISUAL}}
 end
 endsnippet
@@ -27,37 +27,37 @@ function(${1})${0:${VISUAL}}${2}end
 endsnippet
 
 snippet fn "fn" bi
-_G.${1:fname} = function(${2:})
+_G.${1:} = function(${2:})
 	${0:${VISUAL}}
 end
 endsnippet
 
 snippet fm "fn" bi
-M.${1:fname} = function(${2:})
+M.${1:} = function(${2:})
 	${0:${VISUAL}}
 end
 endsnippet
 
 snippet fo "for" bi
-for i=1,#${1:Tb} do
+for i=1,#${1:} do
 	${0:${VISUAL}}
 end
 endsnippet
 
 snippet fon "numeric for loop" b
-for ${1:i}=${2:first},${3:last}${4/^..*/(?0:,:)/}${4:step} do
+for ${1:i}=${2:},${3:}${4/^..*/(?0:,:)/}${4:} do
 	${1:${VISUAL}}
 end
 endsnippet
 
 snippet fp "pair loop" bi
-for ${1:name}, ${2:val} in pairs(${3:${VISUAL}}) do
+for ${1:}, ${2:} in pairs(${3:${VISUAL}}) do
 	$0
 end
 endsnippet
 
 snippet fi "ipair loop" bi
-for ${3:_}, ${2:v} in ipairs(${1:${VISUAL}}) do
+for _,v in ipairs(${1:${VISUAL}}) do
 	$0
 end
 endsnippet
@@ -67,7 +67,7 @@ snippet s "string append" bi
 endsnippet
 
 snippet if "if" w
-if ${1:condition} then
+if ${1:} then
 	${2:${VISUAL}}
 end
 endsnippet
@@ -81,7 +81,7 @@ end
 endsnippet
 
 snippet elf "elseif" w
-elseif ${1:condition} then
+elseif ${1:} then
 	${0:${VISUAL}}
 endsnippet
 
