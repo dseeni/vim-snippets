@@ -23,7 +23,7 @@ end
 endsnippet
 
 snippet fa "anonymous fn" bi
-function(${1})${0:${VISUAL}}${2}end
+function(${1})return ${0:${VISUAL}}${2}end
 endsnippet
 
 snippet fn "fn" bi
@@ -168,8 +168,8 @@ snippet ll "local x = _" bi
 local ${1} = ${0:${VISUAL}}
 endsnippet
 
-snippet pt "p(type(var))" bi
-p(type(${1:${VISUAL}}))
+snippet pt "pp(type(var))" bi
+pp(type(${1:${VISUAL}}))
 endsnippet
 
 snippet ty "typefn(var)" bi
